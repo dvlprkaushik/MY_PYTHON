@@ -1,19 +1,17 @@
 import time
+#importing time module
 
-timestamp = int(time.strftime('%H:%M:%S'))
-print(timestamp)
-timestamp_hour = int(time.strftime('%H'))
-print(timestamp_hour)
-timestamp_minute = int(time.strftime('%M'))
-print(timestamp_minute)
-timestamp_second = int(time.strftime('%S'))
-print(timestamp_second)
+name = input("Enter tyour name : ")
+current_time = time.strftime('%H:%M:%S')
+print("Current time is : ", current_time)
+timestamp_hour = int(time.strftime("%H"))
 
-if (timestamp > int(time.strftime('23:59:59'))):
-    print("It is morning now")
-elif (timestamp >= int(time.strftime('11:59:59')) and (timestamp <= int(time.strftime('15:59:59')))):
-    print("It is afternoon")
-elif (timestamp >= int(time.strftime('17:59:59')) and (timestamp <= int(time.strftime('19:59:59')))):
-    print("It is good evening")
+if (timestamp_hour > 24 and timestamp_hour < 12):
+    print("Good Morning", name)
+elif (timestamp_hour > 12 and timestamp_hour < 16):
+    print("Good afternoon", name)
+elif (timestamp_hour > 16 and timestamp_hour < 20):
+    print("Good evening", name)
 else:
-    print("Good night :)")
+    print("Good night ", name)
+
