@@ -3,7 +3,7 @@ import random
 def guessing_game():
     # Generate a random number between 1 and 100
     secret_number = random.randint(1, 100)
-    print(secret_number)
+    # print(secret_number)
     print("Welcome to the Guessing Game!")
     print("I have chosen a number between 1 and 100. Try to guess it.")
 
